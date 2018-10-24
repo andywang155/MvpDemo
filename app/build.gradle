@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.mvp.testmvp"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //retrofit2.0
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //OkHttp3.0
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    //Fragmentation 流式交互
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+
+    //防止RxJava中subscription导致内存泄漏而诞生的，核心思想是通过监听Activity、Fragment的生命周期，来自动断开subscription以防止内存泄漏
+    // RxLifecycle基础库
+    implementation "com.trello.rxlifecycle2:rxlifecycle:$rx_lifecycle_version"
+    // Android使用的库，里面使用了Android的生命周期方法
+    // 内部引用了基础库，如果使用此库则无需再引用基础库
+    implementation "com.trello.rxlifecycle2:rxlifecycle-android:$rx_lifecycle_version"
+    // Android组件库，里面定义了例如RxAppCompatActivity、RxFragment之类的Android组件
+    // 内部引用了基础库和Android库，如果使用此库则无需再重复引用
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:$rx_lifecycle_version"
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //
+    implementation 'com.android.support:multidex:1.0.3'
+}
