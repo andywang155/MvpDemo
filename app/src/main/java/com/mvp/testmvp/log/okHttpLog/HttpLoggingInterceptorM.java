@@ -17,11 +17,6 @@ import java.util.concurrent.TimeUnit;
 
 import static okhttp3.internal.platform.Platform.INFO;
 
-/**
- * author: baiiu
- * date: on 16/8/31 19:09
- * description:
- */
 public final class HttpLoggingInterceptorM implements Interceptor {
     private static final Charset UTF8 = Charset.forName("UTF-8");
 

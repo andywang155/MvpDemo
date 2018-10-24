@@ -3,9 +3,6 @@ package com.mvp.testmvp.log;
 import android.text.TextUtils;
 import android.util.Log;
 
-/**
- * Created by zhaokaiqiang on 15/12/11.
- */
 public class LogUtilHelper {
 
     public static boolean isEmpty(String line) {

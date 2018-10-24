@@ -13,9 +13,6 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class XmlLog {
 
     public static void printXml(String tag, String xml, String headString) {

@@ -3,11 +3,6 @@ package com.mvp.testmvp.log.okHttpLog;
 
 import com.mvp.testmvp.log.LogUtil;
 
-/**
- * author: baiiu
- * date: on 16/8/31 19:40
- * description:
- */
 public class LogInterceptor implements HttpLoggingInterceptorM.Logger {
 
     public static String INTERCEPTOR_TAG_STR = "OkHttp";

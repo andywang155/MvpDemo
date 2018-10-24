@@ -5,9 +5,6 @@ import android.util.Log;
 import java.io.*;
 import java.util.Random;
 
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class FileLog {
 
     public static void printFile(String tag, File targetDirectory, String fileName, String headString, String msg) {

@@ -3,10 +3,6 @@ package com.mvp.testmvp.log.klog;
 import android.util.Log;
 import com.mvp.testmvp.log.LogUtil;
 
-
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class BaseLog {
 
     public static void printDefault(int type, String tag, String msg) {

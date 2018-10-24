@@ -7,9 +7,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class JsonLog {
 
     public static void printJson(String tag, String msg, String headString) {

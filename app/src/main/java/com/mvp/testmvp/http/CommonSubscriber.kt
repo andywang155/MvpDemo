@@ -14,9 +14,6 @@ import java.net.NoRouteToHostException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
-/**
- * Created by cuiyue on 2017/6/22.
- */
 abstract class CommonSubscriber<T>(view: BaseView?,  url: String = "") : ResourceSubscriber<T>() {
 
     private var mErrorMsg: String = ""
